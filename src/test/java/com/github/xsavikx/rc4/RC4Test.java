@@ -19,7 +19,7 @@ public class RC4Test {
 
 	@Test
 	public void testCryptMessage() throws InvalidKeyException {
-		char[] crypt = rc4.encryptMessage(message, key);
+		byte[] crypt = rc4.encryptMessage(message, key);
 		String msg = rc4.decryptMessage(crypt, key);
 		assertEquals(message, msg);
 	}
