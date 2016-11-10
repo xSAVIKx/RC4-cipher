@@ -29,4 +29,36 @@
             </plugin>
         </plugins>
     </build>
+    <url>https://github.com/xSAVIKx/RC4-cipher</url>
+    <scm>
+        <url>https://github.com/xSAVIKx/RC4-cipher</url>
+        <connection>scm:https://github.com/xSAVIKx/RC4-cipher</connection>
+        <developerConnection>scm:git://github.com/xSAVIKx/RC4-cipher</developerConnection>
+    </scm>
+    <issueManagement>
+        <system>GitHub</system>
+        <url>https://github.com/xSAVIKx/RC4-cipher/issues</url>
+    </issueManagement>
+    <ciManagement>
+        <system>Travis-CI</system>
+        <url>https://travis-ci.org/xSAVIKx/RC4-cipher</url>
+    </ciManagement>
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>https://github.com/xSAVIKx/RC4-cipher/blob/master/LICENSE</url>
+            <distribution>repo</distribution>
+            <comments>A business-friendly OSS license</comments>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <id>xSAVIKx</id>
+            <name>Iurii Sergiichuk</name>
+            <email>iurii.sergiichuk@gmail.com</email>
+            <roles>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
 </project>
