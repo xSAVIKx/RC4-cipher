@@ -33,7 +33,7 @@ public class RC4 {
 
 	/**
 	 * Encrypt given message String with given Charset and key
-	 * 
+	 *
 	 * @param message
 	 *            message to be encrypted
 	 * @param charset
@@ -55,7 +55,7 @@ public class RC4 {
 
 	/**
 	 * Encrypt given message String with given Key and pre-defined UTF-8 charset
-	 * 
+	 *
 	 * @param message
 	 *            message to be encrypted
 	 * @param key
@@ -72,7 +72,7 @@ public class RC4 {
 
 	/**
 	 * Decrypt given byte[] message array with given charset and key
-	 * 
+	 *
 	 * @param message
 	 *            message to be decrypted
 	 * @param charset
@@ -95,7 +95,7 @@ public class RC4 {
 	/**
 	 * Decrypt given byte[] message array with given key and pre-defined UTF-8
 	 * charset
-	 * 
+	 *
 	 * @param message
 	 *            message to be decrypted
 	 * @param key
@@ -113,7 +113,7 @@ public class RC4 {
 	/**
 	 * Crypt given byte array. Be aware, that you must init key, before using
 	 * crypt.
-	 * 
+	 *
 	 * @param msg
 	 *            array to be crypt
 	 * @return crypted byte array
@@ -138,7 +138,7 @@ public class RC4 {
 
 	/**
 	 * Initialize SBOX with given key. Key-scheduling algorithm
-	 * 
+	 *
 	 * @param key
 	 *            key
 	 * @return sbox int array
@@ -155,7 +155,7 @@ public class RC4 {
 		}
 
 		for (int i = 0; i < SBOX_LENGTH; i++) {
-			j = (j + sbox[i] + key[i % key.length]) % SBOX_LENGTH;
+			j = (j + sbox[i] + (0xFF & (int)key[i % key.length])) % SBOX_LENGTH;
 			swap(i, j, sbox);
 		}
 		return sbox;
@@ -169,7 +169,7 @@ public class RC4 {
 
 	/**
 	 * Setup key
-	 * 
+	 *
 	 * @param key
 	 *            key to be setup
 	 * @throws InvalidKeyException
@@ -188,7 +188,7 @@ public class RC4 {
 
 /**
  * Exception made for recognise invalid keys
- * 
+ *
  * @author Iurii Sergiichuk
  */
 class InvalidKeyException extends Exception {
